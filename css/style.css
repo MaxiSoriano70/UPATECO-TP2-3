@@ -1,0 +1,410 @@
+:root{
+    --color-principal:#1a1a36;
+    --color-secundario:#bfe6a7;
+    --color-fondo:#771b1b;
+    --color-letra-pricipal: #fff;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+header{
+    height: 15vh;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+}
+
+header p{
+    font-weight: bold;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section h2{
+    padding: 10px;
+}
+
+.contenedor-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.contenedor-button button{
+    padding: 10px 15px;
+    margin: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.contenedor-button button:hover{
+    background-color: var(--color-fondo);
+    color: var(--color-letra-pricipal);
+}
+
+section .desarrollo .formulario-1{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+section .desarrollo .formulario-1 label{
+    margin: 10px 0;
+}
+
+section .desarrollo .formulario-1 input{
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+section .desarrollo .formulario-2{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+section .desarrollo .formulario-2 .contenedor-inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .desarrollo .formulario-2 .contenedor-inputs input{
+    width: 50px;
+    margin: 0px 10px;
+}
+
+section .desarrollo .formulario-3{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+section .desarrollo .formulario-3 .contenedor-inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .desarrollo .formulario-3 .contenedor-inputs input{
+    width: 50px;
+    margin: 0px 10px;
+}
+
+section .desarrollo .formulario-4{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+section .desarrollo .formulario-4 .contenedor-inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .desarrollo .formulario-4 .contenedor-inputs input{
+    width: 50px;
+    margin: 0px 10px;
+}
+
+section .desarrollo .formulario-5{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+section .desarrollo .formulario-5 .contenedor-inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+section .desarrollo .formulario-5 .contenedor-inputs input{
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+section .desarrollo .formulario-6{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+section .desarrollo .formulario-6 .contenedor-inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+section .desarrollo .formulario-6 .contenedor-inputs input{
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+section .desarrollo .formulario-6 .contenedor-a-cambiar-color{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color-letra-pricipal);
+    color: var(--color-principal);
+    border-radius: 25px;
+}
+
+section .desarrollo .formulario-7{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+section .desarrollo .formulario-7 .contenedor-mostrar-ocultar{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color-letra-pricipal);
+    color: var(--color-principal);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .desarrollo .formulario-8{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+section .desarrollo .formulario-8 label{
+    margin: 10px 0;
+}
+
+section .desarrollo .formulario-8 input{
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+section .contenedor-tabla{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .contenedor-tabla table{
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th{
+    border: black 2px solid;
+    padding: 10px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+}
+
+td{
+    border: black 2px solid;
+    padding: 10px;
+}
+
+section .desarrollo .formulario-9{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    border-radius: 25px;
+    margin: 20px;
+}
+
+section .desarrollo .formulario-9 label{
+    margin: 10px 0;
+}
+
+section .desarrollo .formulario-9 input{
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.tabla-10{
+    margin: 20px 10px;
+}
+
+.desarrollo-11{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px;
+}
+
+.desarrollo-11 div ol{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    padding: 0;
+    margin: 20px 10px;
+    text-align: center;
+    border: 1px solid var(--color-principal);
+}
+
+.desarrollo-11 div ol li{
+    border: 1px solid var(--color-principal);
+}
+
+.desarrollo-11 div ol .primer-dia{
+    grid-column-start: 3;
+}
+
+.desarrollo-11 div ol .nombre-dia{
+    font-weight: bold;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    padding: 10px;
+}
+
+.desarrollo-11 .descripcion-calendario{
+    width: 100%;
+    padding: 10px;
+}
+
+.desarrollo-11 .descripcion-calendario ul{
+    padding-left: 10px;
+    list-style: none;
+}
+
+.desarrollo-12{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-principal);
+    padding: 10px;
+    border-radius: 25px;
+    margin: 15px;
+}
+
+.desarrollo-12 h3{
+    color: var(--color-secundario);
+    margin-bottom: 20px;
+}
+
+.desarrollo-12 .chats{
+    background-color: var(--color-letra-pricipal);
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 20px 10px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.desarrollo-12 .chats article{
+    width: 100%;
+    background-color: #bfe6a7;
+    color: var(--color-principal);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.desarrollo-12 .chat-input-button{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desarrollo-12 .chat-input-button input{
+    width: 70%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.desarrollo-12 .chat-input-button button{
+    width: 25%;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+.desarrollo-12 .chat-input-button button:hover{
+    background-color: var(--color-fondo);
+    color: var(--color-letra-pricipal);
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+    padding: 20px;
+}
+
+footer h3{
+    margin: 20px 0px;
+}
+
+footer p{
+    font-weight: bold;
+}

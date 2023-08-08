@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TP2</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo_upateco.png" alt="logo">
+        <h1>Grupo 9</h1>
+        <p>Prof. Jorge Esteban Tevez</p>
+    </header>
+    <main>
+        <section>
+            <h2>Ejercicio 1</h2>
+            <p>Escribe una función que tome dos números como parámetros y devuelva la suma de ambos.</p>
+            <div class="desarrollo">
+                <form action="#" class="formulario-1" onsubmit="return retornoFalso()">
+                    <label for="numero1">1er numero:</label>
+                    <input type="number" name="" id="numero1">
+                    <label for="numero2">2do numero:</label>
+                    <input type="number" name="" id="numero2">
+                    <div class="contenedor-button">
+                        <button type="submit" onclick="sumar()">Sumar</button><br>
+                    </div>
+                    <span id="resultado">Resultado: </span>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 2</h2>
+            <p>Escribe una función que tome un array de números como parámetro y devuelva un nuevo array con los números ordenados de forma ascendente.</p>
+            <div class="desarrollo">
+                <form class="formulario-2" onsubmit="return retornoFalso()">
+                    <div class="contenedor-inputs">
+                        <label>Lista de numero: </label>
+                        <input type="text" id="0">
+                        <input type="text" id="1">
+                        <input type="text" id="2">
+                        <input type="text" id="3">
+                        <input type="text" id="4">
+                        <input type="text" id="5">
+                        <input type="text" id="6">
+                        <input type="text" id="7">
+                        <input type="text" id="8">
+                        <input type="text" id="9">
+                    </div>
+                    <div class="contenedor-button">
+                        <button onclick="ordenar()">Enviar</button>
+                    </div>
+                    <p id="listaordenada">
+                        Lista Ordenada:
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 3</h2>
+            <p>Crear un vector de números con al menos 10 elementos, filtrar todos los números pares e insertarlo dentro de un elemento HTML.</p>
+            <div class="desarrollo">
+                <form action="" class="formulario-3" onsubmit="return retornoFalso()">
+                    <div class="contenedor-inputs">
+                        <label for="">Vector:</label>
+                        <input type="text" id="f0">
+                        <input type="text" id="f1">
+                        <input type="text" id="f2">
+                        <input type="text" id="f3">
+                        <input type="text" id="f4">
+                        <input type="text" id="f5">
+                        <input type="text" id="f6">
+                        <input type="text" id="f7">
+                        <input type="text" id="f8">
+                        <input type="text" id="f9">
+                    </div>
+                    <div class="contenedor-button">
+                        <button onclick="filtrarPares()">Enviar</button>
+                    </div>
+                    <p>
+                        Pares:
+                    </p>
+                    <ul id="pares"></ul>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 4</h2>
+            <p>Encontrar el número más grande en un Array.
+            </p>
+            <div class="desarrollo">
+                <form action="" class="formulario-4" onsubmit="return retornoFalso()">
+                    <div class="contenedor-inputs">
+                        <input type="text" id="m0">
+                        <input type="text" id="m1">
+                        <input type="text" id="m2">
+                        <input type="text" id="m3">
+                        <input type="text" id="m4">
+                        <input type="text" id="m5">
+                        <input type="text" id="m6">
+                        <input type="text" id="m7">
+                        <input type="text" id="m8">
+                        <input type="text" id="m9">
+                    </div>
+                    <div class="contenedor-button">
+                        <button onclick="mayor()">Enviar</button>
+                    </div>
+                    <p id="mayor">
+                        Mayor:
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 5</h2>
+            <p>Escribe una función que tome un número como parámetro y calcule la suma de todos los números primos menores o iguales a ese número.
+            </p>
+            <div class="desarrollo">
+                <form action="" class="formulario-5" onsubmit="return retornoFalso()">
+                    <div class="contenedor-inputs">
+                        <label for="">Numero:</label>
+                        <input type="number" id="limitePrimo">
+                    </div>
+                    <div class="contenedor-button">
+                        <button onclick="sumaPrimos()">Enviar</button>
+                    </div>
+                    <p id="primos-menores-iguales">
+                        Primos <= :
+                    </p><br>
+                    <p id="sumaPrimos">Suma total:</p>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 6</h2>
+            <p>Crea un botón y agregarle un evento para que cambie de color.
+            </p>
+            <div class="desarrollo">
+                <form action="" class="formulario-6" onsubmit="return retornoFalso()">
+                    <div class="contenedor-inputs">
+                        <label for="">Color:</label>
+                        <input type="color" name="" id="colorseleccionado">
+                    </div>
+                    <div class="contenedor-button">
+                        <button onclick="cambiarColor()">Enviar</button>
+                    </div>
+                    <div class="contenedor-a-cambiar-color" id="paleta">
+                        <P id="cpaleta">CAMBIO DE COLOR</P>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 7</h2>
+            <p>Crear una función que oculte/muestre un div.
+            </p>
+            <div class="desarrollo">
+                <form action="" class="formulario-7" onsubmit="return retornoFalso()">
+                    <div class="contenedor-button">
+                        <button id="mostrarocultar" onclick="mostrarOcultar()">Ocultar</button>
+                    </div>
+                    <div class="contenedor-mostrar-ocultar" id="divparaocultar">
+                        <p>Mostrar o Ocultar</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 8</h2>
+            <p>Crear un objeto persona que contenga nombre, apellido, edad, sexo y teléfono. Luego crear una tabla (con JavaScript) e insertar los datos con su respectivo encabezado</p>
+            <div class="desarrollo">
+                <form action="#" class="formulario-8" onsubmit="return appendPersona()">
+                    <label for="fname">Nombre:</label>
+                    <input type="text" name="" id="fname" placeholder="Nombre">
+                    <label for="lname">Apellido:</label>
+                    <input type="text" name="" id="lname" placeholder="Apellido">
+                    <label for="edad">Edad:</label>
+                    <input type="number" name="" id="edad" placeholder="Edad">
+                    <label for="sexo">Sexo:</label>
+                    <label for=""><input type="radio" name="sexo" value="masculino" id="sexoM"> Masculino</label>
+                    <label for=""><input type="radio" name="sexo" value="femenino" id="sexoF"> Femenino</label>
+                    <label for="tel">Telefono:</label>
+                    <input type="tel" name="" id="tel" placeholder="(XXX) - X - XXX - XXX">
+                    <div class="contenedor-button">
+                        <input type="submit" value="Enviar"><br>
+                    </div>
+                </form>
+            </div>
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Numero</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>Sexo</th>
+                            <th>Telefono</th>
+                        </tr>
+                    </thead>
+                        <tbody id="tablaPersonas">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 9</h2>
+            <p>Crear un documento HTML con un formulario que contenga los campos Nombre y Email, se pide recuperar los valores ingresados y mostrarlos por consola.</p>
+            <div class="desarrollo">
+                <form action="#" class="formulario-9" onsubmit="return retornoFalso()">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="" id="" placeholder="Nombre">
+                    <label for="email">Email:</label>
+                    <input type="email" name="" id="" placeholder="Email">
+                    <div class="contenedor-button">
+                        <button type="submit" onclick="">Enviar</button><br>
+                    </div>
+                    <span id="resultado">Resultado: </span>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 10</h2>
+            <p>Dada la siguiente tabla en HTML se solicita, haciendo uso de la api proporcionada,completar con los datos necesarios. Hay que crear la estructura HTML desde el JavaScript.</p>
+            <div class="contenedor-tabla tabla-10">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Número</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                            <th>Nombre de la Empresa</th>
+                            <th>Direccion</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    1
+                                </th>
+                                <td>Programación</td>
+                                <td>-</td>
+                                <td>Programación</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Bootcamp</td>
+                                <td>-</td>
+                                <td>Bootcamp</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Bootcamp</td>
+                                <td>Ingles</td>
+                                <td>Bootcamp</td>
+                                <td>Ingles</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 11</h2>
+            <p>Crea un calendario simple que muestre los eventos programados para un día específico.Puedes usar objetos para representar los eventos y mostrarlos en una lista.</p>
+            <div class="desarrollo-11">
+                <h3>Agosto 2023</h3>
+                <div>
+                    <ol>
+                        <li class="nombre-dia">Lun</li>
+                        <li class="nombre-dia">Mar</li>
+                        <li class="nombre-dia">Mié</li>
+                        <li class="nombre-dia">Jue</li>
+                        <li class="nombre-dia">Vie</li>
+                        <li class="nombre-dia">Sáb</li>
+                        <li class="nombre-dia">Dom</li>
+                        <li class="primer-dia">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                    </ol>
+                </div>
+                <div class="descripcion-calendario">
+                    <ul>
+                        <li><i class="las la-calendar-day"></i> Evento</li>
+                        <li><i class="las la-calendar-day"></i> Evento</li>
+                        <li><i class="las la-calendar-day"></i> Evento</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejercicio 12</h2>
+            <p>Crear un “chatBox” donde tome los datos de un input y los muestre, (Se debe usar HTML, CSS y JavaScript).</p>
+            <div class="desarrollo-12">
+                <h3>GARCHAT</h3>
+                <div class="chats">
+                    <article>
+                        <p>Gordo puto!!!</p>
+                    </article>
+                    <article>
+                        <p>CDT</p>
+                    </article>
+                    <article>
+                        <p>( . ) ( . )</p>
+                    </article>
+                    <article>
+                        <p>PAPAPAPAPA PAJA DE LA SEMANA</p>
+                    </article>
+                </div>
+                <div class="chat-input-button">
+                    <input type="text" name="" id="">
+                    <button type="submit">Enviar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>INTEGRANTES</h3>
+        <p>Cristian Geronimo</p>
+        <p>Maximiliano Soriano</p>
+        <p>Thiago Castilla</p>
+        <p>Jose Puca</p>
+    </footer>
+    <script src="js/tp2.js"></script>
+</body>
+</html>
