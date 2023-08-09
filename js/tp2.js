@@ -1,3 +1,4 @@
+//EJERCICIO 1
 function sumar(){
     const NUMERO1 = parseInt(document.getElementById("numero1").value);
     const NUMERO2 = parseInt(document.getElementById("numero2").value);
@@ -241,7 +242,6 @@ class Persona {
     }
 }
 
-
 function appendPersona(){
     const NOMBRE = document.getElementById("fname");
     const APELLIDO = document.getElementById("lname");
@@ -311,6 +311,7 @@ function createTable(){
     }
     return TBODY;
 }
+
 function generarHTML(){
     const HTML = createHTML();
     const SECTION = createSectionForm();
@@ -322,6 +323,7 @@ function generarHTML(){
     VENTANA.document.write(CONTENIDOHTML);
     VENTANA.document.close();
 }
+
 function createHTML(){
     //creamos un html
     const HTML = document.createElement("html");
@@ -376,6 +378,7 @@ function createHTML(){
     HTML.appendChild(BODY);
     return HTML;
 }
+
 function createSectionForm(){
     //creamos un SECTION
     const SECTION = document.createElement('section');
@@ -428,4 +431,100 @@ function createSectionForm(){
     //agregamos el DIV al SECTION
     SECTION.appendChild(DIV);
     return SECTION;
+}
+
+//EJERCICIO 10
+async function traer_datos_de_api(){
+    try{
+        const RESPONSE= await fetch('https://jsonplaceholder.typicode.com/users');
+        const USERDATA= await RESPONSE.json();
+
+        const TABLA_JSON=document.getElementById('tabla-json');
+        USERDATA.forEach(user=>{
+            const ROW=document.createElement('tr');
+
+            const ID=document.createElement('th');
+            ID.textContent=user.id;
+            ROW.appendChild(ID);
+
+            const NOMBRE=document.createElement('td');
+            NOMBRE.textContent=user.name;
+            ROW.appendChild(NOMBRE);
+
+            const USUARIO=document.createElement('td');
+            USUARIO.textContent=user.username;
+            ROW.appendChild(USUARIO);
+
+            const EMAIL=document.createElement('td');
+            EMAIL.textContent=user.email;
+            ROW.appendChild(EMAIL);
+
+            const DIRECCION=document.createElement('td');
+            DIRECCION.textContent=user.address.street+" "+user.address.suite;
+            ROW.appendChild(DIRECCION);
+
+            const CITY=document.createElement('td');
+            CITY.textContent=user.address.city;
+            ROW.appendChild(CITY);
+
+            const CODIGO_POSTAL=document.createElement('td');
+            CODIGO_POSTAL.textContent=user.address.zipcode;
+            ROW.appendChild(CODIGO_POSTAL);
+
+            const TELEFONO=document.createElement('td');
+            TELEFONO.textContent=user.phone;
+            ROW.appendChild(TELEFONO);
+
+            const WEBSITE=document.createElement('td');
+            WEBSITE.textContent=user.website;
+            ROW.appendChild(WEBSITE);
+
+            const COMPANIA=document.createElement('td');
+            COMPANIA.textContent=user.company.name;
+            ROW.appendChild(COMPANIA);
+
+            TABLA_JSON.appendChild(ROW);
+        });
+    }
+    catch(error){
+        console.error('Error fetching data:', error);
+    }
+}
+
+traer_datos_de_api();
+
+//EJERCICIO 11
+
+async function traer_datos_de_api(){
+    try{
+        const RESPONSE= await fetch('json/eventos.json');
+        const EVENTODATA= await RESPONSE.json();
+
+        const CONTENEDOR_EVENTO=document.getElementById('lista-de-eventos');
+        EVENTODATA.forEach(evento=>{
+            const ROW=document.createElement('li');
+            const ICONO=document.createElement('i');
+            ICONO.classList.add('las', 'la-calendar-day');
+            ROW.appendChild(ICONO);
+            ROW.textContent=evento.titulo+" "+evento.fecha+" "+evento.ubicacion;
+            CONTENEDOR_EVENTO.appendChild(ROW);
+        });
+    }
+    catch(error){
+        console.error('Error fetching data:', error);
+    }
+}
+
+//EJERCICIO 12
+function super_chat(){
+    const INPUT_CHAT=document.getElementById('input-chat');
+    if(INPUT_CHAT.value!==""){
+        const SUPER_CHAT=document.getElementById('super-chat');
+        const ARTICICLE=document.createElement('article');
+        const TEXT=document.createElement('p');
+        TEXT.textContent=INPUT_CHAT.value;
+        ARTICICLE.appendChild(TEXT);
+        SUPER_CHAT.appendChild(ARTICICLE);
+        INPUT_CHAT.value="";
+    }
 }

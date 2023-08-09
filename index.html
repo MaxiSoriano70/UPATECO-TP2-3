@@ -195,7 +195,6 @@
                 </form>
             </div>
             <div class="contenedor-tabla" id="divtabla">
-                
             </div>
         </section>
 
@@ -218,39 +217,17 @@
                         <tr>
                             <th>Número</th>
                             <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Usuario</th>
                             <th>Email</th>
-                            <th>Nombre de la Empresa</th>
                             <th>Direccion</th>
+                            <th>Ciudad</th>
+                            <th>Codigo Postal</th>
+                            <th>Telefono</th>
+                            <th>Website</th>
+                            <th>Compañia</th>
                         </tr>
                     </thead>
-                        <tbody>
-                            <tr>
-                                <th>
-                                    1
-                                </th>
-                                <td>Programación</td>
-                                <td>-</td>
-                                <td>Programación</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <th>2</th>
-                                <td>Bootcamp</td>
-                                <td>-</td>
-                                <td>Bootcamp</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <th>3</th>
-                                <td>Bootcamp</td>
-                                <td>Ingles</td>
-                                <td>Bootcamp</td>
-                                <td>Ingles</td>
-                                <td>-</td>
-                            </tr>
+                        <tbody id="tabla-json">
                         </tbody>
                 </table>
             </div>
@@ -304,9 +281,7 @@
                     </ol>
                 </div>
                 <div class="descripcion-calendario">
-                    <ul>
-                        <li><i class="las la-calendar-day"></i> Evento</li>
-                        <li><i class="las la-calendar-day"></i> Evento</li>
+                    <ul id="lista-de-eventos">
                         <li><i class="las la-calendar-day"></i> Evento</li>
                     </ul>
                 </div>
@@ -317,24 +292,12 @@
             <h2>Ejercicio 12</h2>
             <p>Crear un “chatBox” donde tome los datos de un input y los muestre, (Se debe usar HTML, CSS y JavaScript).</p>
             <div class="desarrollo-12">
-                <h3>GARCHAT</h3>
-                <div class="chats">
-                    <article>
-                        <p>Gordo puto!!!</p>
-                    </article>
-                    <article>
-                        <p>CDT</p>
-                    </article>
-                    <article>
-                        <p>( . ) ( . )</p>
-                    </article>
-                    <article>
-                        <p>PAPAPAPAPA PAJA DE LA SEMANA</p>
-                    </article>
+                <h3>SUPER CHAT</h3>
+                <div class="chats" id="super-chat">
                 </div>
                 <div class="chat-input-button">
-                    <input type="text" name="" id="">
-                    <button type="submit">Enviar</button>
+                    <input type="text" name="" id="input-chat">
+                    <button type="submit" onclick="super_chat()">Enviar</button>
                 </div>
             </div>
         </section>
