@@ -319,7 +319,7 @@ function generarHTML(){
     const SECTION = createSectionForm();
     const BODY = HTML.querySelector("body");
     const SCRIPT= document.createElement('script');
-    SCRIPT.setAttribute('src','js/tp2.js');
+    SCRIPT.setAttribute('src','js/tp2_ejercicio_9.js');
     BODY.appendChild(SECTION);
     BODY.appendChild(SCRIPT);
     const CONTENIDOHTML =HTML.outerHTML;
@@ -327,17 +327,6 @@ function generarHTML(){
     VENTANA.document.open();
     VENTANA.document.write(CONTENIDOHTML);
     VENTANA.document.close();
-}
-
-function mostrar_datos_x_consola(){
-    const NOMBRE = document.getElementById('nombre');
-    const MAIL = document.getElementById('mail');
-    if(NOMBRE.value!=='' && MAIL.value!==''){
-        console.log('Nombre: '+NOMBRE.value);
-        console.log('Mail: '+MAIL.value);
-        NOMBRE.value='';
-        MAIL.value='';
-    }
 }
 
 function createHTML(){
@@ -518,8 +507,12 @@ traer_datos_de_api();
 //         dia.addEventListener('click', //funcion )
 //     })
 // }
-// function cargarEventos(){
-
+// async function cargarEventos(dia){
+//     try{
+//         const RESPONSE = await fetch()
+//     }catch (error){
+//         console.error("Error al cargar los datos de los eventos: ", error);
+//     }
 // }
 
 async function traer_datos_de_api_eventos(){

@@ -237,6 +237,22 @@ section .desarrollo .formulario-8 input{
     border-radius: 15px;
 }
 
+.imagen-ejemplo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagen-ejemplo img{
+    width: 50%;
+}
+
+.imagen-ejemplo h3{
+    padding: 20px 10px;
+}
+
 section .contenedor-tabla{
     width: 100%;
     display: flex;

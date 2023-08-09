@@ -1,22 +1,35 @@
-[
-    {
-      "titulo": "Conferencia de Tecnología",
-      "fecha": "2023-08-10",
-      "ubicacion": "Buenos Aires"
-    },
-    {
-      "titulo": "Taller de Arte",
-      "fecha": "2023-08-15",
-      "ubicacion": "Córdoba"
-    },
-    {
-      "titulo": "Concierto de Rock",
-      "fecha": "2023-08-20",
-      "ubicacion": "Rosario"
-    },
-    {
-      "titulo": "Exposición de Fotografía",
-      "fecha": "2023-08-25",
-      "ubicacion": "Mendoza"
-    }
-]
+{
+  "Agosto": {
+    "1": [
+      {
+        "titulo": "Evento 1",
+        "hora": "10:00 AM",
+        "lugar": "Lugar A"
+      },
+      {
+        "titulo": "Evento 2",
+        "hora": "03:00 PM",
+        "lugar": "Lugar B"
+      }
+    ],
+    "2": [
+      {
+        "titulo": "Evento 3",
+        "hora": "11:30 AM",
+        "lugar": "Lugar C"
+      }
+    ],
+    "4": [
+      {
+        "titulo": "Evento 4",
+        "hora": "02:00 PM",
+        "lugar": "Lugar D"
+      },
+      {
+        "titulo": "Evento 5",
+        "hora": "05:30 PM",
+        "lugar": "Lugar E"
+      }
+    ],
+  }
+}
