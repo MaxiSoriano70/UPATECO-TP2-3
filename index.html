@@ -194,21 +194,8 @@
                     </div>
                 </form>
             </div>
-            <div class="contenedor-tabla">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Numero</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Edad</th>
-                            <th>Sexo</th>
-                            <th>Telefono</th>
-                        </tr>
-                    </thead>
-                        <tbody id="tablaPersonas">
-                        </tbody>
-                </table>
+            <div class="contenedor-tabla" id="divtabla">
+                
             </div>
         </section>
 
@@ -216,16 +203,9 @@
             <h2>Ejercicio 9</h2>
             <p>Crear un documento HTML con un formulario que contenga los campos Nombre y Email, se pide recuperar los valores ingresados y mostrarlos por consola.</p>
             <div class="desarrollo">
-                <form action="#" class="formulario-9" onsubmit="return retornoFalso()">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="" id="" placeholder="Nombre">
-                    <label for="email">Email:</label>
-                    <input type="email" name="" id="" placeholder="Email">
-                    <div class="contenedor-button">
-                        <button type="submit" onclick="">Enviar</button><br>
-                    </div>
-                    <span id="resultado">Resultado: </span>
-                </form>
+                <div class="contenedor-button">
+                    <button onclick="generarHTML()">Generar HTML</button><br>
+                </div>
             </div>
         </section>
 
