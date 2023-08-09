@@ -1,0 +1,22 @@
+[
+    {
+      "titulo": "Conferencia de Tecnología",
+      "fecha": "2023-08-10",
+      "ubicacion": "Buenos Aires"
+    },
+    {
+      "titulo": "Taller de Arte",
+      "fecha": "2023-08-15",
+      "ubicacion": "Córdoba"
+    },
+    {
+      "titulo": "Concierto de Rock",
+      "fecha": "2023-08-20",
+      "ubicacion": "Rosario"
+    },
+    {
+      "titulo": "Exposición de Fotografía",
+      "fecha": "2023-08-25",
+      "ubicacion": "Mendoza"
+    }
+]

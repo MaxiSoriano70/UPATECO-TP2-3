@@ -344,6 +344,7 @@ section .desarrollo .formulario-9 input{
 }
 
 .desarrollo-12 .chats{
+    width: 100%;
     background-color: var(--color-letra-pricipal);
     border-radius: 25px;
     margin-bottom: 20px;
