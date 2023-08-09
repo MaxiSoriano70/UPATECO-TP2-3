@@ -226,8 +226,7 @@ class Persona {
         Persona.contador++;
     }
 
-    addtable(){
-        const tabla = document.getElementById("tablaPersonas");
+    addtable(tabla){
         const TR = document.createElement('tr');
         tabla.appendChild(TR);
         const TH = document.createElement('th');
@@ -242,6 +241,7 @@ class Persona {
     }
 }
 
+
 function appendPersona(){
     const NOMBRE = document.getElementById("fname");
     const APELLIDO = document.getElementById("lname");
@@ -250,7 +250,7 @@ function appendPersona(){
     const SEXOF = document.getElementById("sexoF");
     const TELEFONO = document.getElementById("tel");
     //referencia a la tabla persona
-    const TABLA = document.getElementById("tablaPersonas");
+    let cuerpotabla = document.getElementById("tablaPersonas");
     if (checkNombre(NOMBRE)){
         if (checkNombre(APELLIDO)){
             if (checkEdad(EDAD)){
@@ -265,8 +265,11 @@ function appendPersona(){
                                                 EDAD.value,
                                                 sexo,
                                                 TELEFONO.value);
-                        persona.addtable();
-                        return true;
+                        if (cuerpotabla === null){
+                            cuerpotabla = createTable();
+                        }
+                        persona.addtable(cuerpotabla);
+                        return false;
                     }else{
                         return false;
                     }
@@ -289,4 +292,140 @@ function appendPersona(){
         checkTelefono(TELEFONO);
         return false;
     }
+}
+
+function createTable(){
+    const DIV = document.getElementById("divtabla");
+    const TABLA = document.createElement("table");
+    const THEAD = document.createElement("thead");
+    const TBODY = document.createElement("tbody");
+    TBODY.id = "tablaPersonas";
+    DIV.appendChild(TABLA);
+    TABLA.appendChild(THEAD);
+    TABLA.appendChild(TBODY);
+    const header = ["Numero", "Nombre", "Apellido", "Edad", "Sexo", "Telefono"];
+    for (let head of header){
+        let TH = document.createElement("th");
+        TH.textContent = head;
+        THEAD.appendChild(TH);
+    }
+    return TBODY;
+}
+function generarHTML(){
+    const HTML = createHTML();
+    const SECTION = createSectionForm();
+    const BODY = HTML.querySelector("body");
+    BODY.appendChild(SECTION);
+    const CONTENIDOHTML =HTML.outerHTML;
+    const VENTANA = window.open();
+    VENTANA.document.open();
+    VENTANA.document.write(CONTENIDOHTML);
+    VENTANA.document.close();
+}
+function createHTML(){
+    //creamos un html
+    const HTML = document.createElement("html");
+    //creamos y configuramos el head
+    const HEAD = document.createElement("head");
+        //creamos los meta
+    const META1 = document.createElement("meta");
+    const META2 = document.createElement("meta");
+        //configuramos los metas
+    META1.setAttribute('charset', "UTF-8");
+    META2.setAttribute('name', 'viewport');
+    META2.setAttribute('content', "width=device-width, initial-scale=1.0");
+        //creamos el title
+    const TITLE = document.createElement('title');
+        //configuramos el title
+    TITLE.textContent = "Ejercicio 9";
+        //creamos un link para conectar el css
+    const LINK = document.createElement('link');
+        //configuramos el link
+    LINK.setAttribute('rel', "stylesheet");
+    LINK.setAttribute('href', 'css/style.css');
+    //agregamos los metas al HEAD
+    HEAD.appendChild(META1);
+    HEAD.appendChild(META2);
+    //agregamos el titulo al HEAD
+    HEAD.appendChild(TITLE);
+    //agregamos el link al HEAD
+    HEAD.appendChild(LINK);
+    //creamos el body
+    const BODY = document.createElement("body");
+        //creamos un HEADER
+    const HEADER = document.createElement('header');
+        //creamos el contenido del HEADER
+    const IMG = document.createElement('img');
+    const H1 = document.createElement('h1');
+    const P = document.createElement('p');
+        //configuramos la IMG
+    IMG.setAttribute('src','img/logo_upateco.png');
+    IMG.setAttribute('alt','logo');
+        //configuramos H1
+    H1.textContent = 'Grupo 9';
+        //configuramos P
+    P.textContent = 'Prof. Jorge Esteban Tevez';
+        //agregamos los elementos IMG,H1 y P al HEADER;
+    HEADER.appendChild(IMG);
+    HEADER.appendChild(H1);
+    HEADER.appendChild(P);
+        //agregamos el HEADER al BODY
+    BODY.appendChild(HEADER);
+    //agregamos el HEAD y el BODY al HTML
+    HTML.appendChild(HEAD);
+    HTML.appendChild(BODY);
+    return HTML;
+}
+function createSectionForm(){
+    //creamos un SECTION
+    const SECTION = document.createElement('section');
+    //creamos un DIV
+    const DIV = document.createElement('div');
+        //configuramos el DIV
+    DIV.setAttribute('class', 'desarrollo');
+    //creamos un FORM
+    const FORM = document.createElement('form');
+        //configuramos el FORM
+    FORM.setAttribute('action', '#');
+    FORM.setAttribute('class', 'formulario-9');
+        //creamos los label y input correspondientes
+    const LABELN = document.createElement('label');
+    const INPUTN = document.createElement('input');
+    const LABELE = document.createElement('label');
+    const INPUTE = document.createElement('input');
+        //cofiguramos el LABELN
+    LABELN.textContent = 'Nombre:';
+    LABELN.setAttribute('for', 'nombre');
+        //cofiguramos el LABELE
+    LABELE.textContent = 'E-MAIL:';
+    LABELE.setAttribute('for', 'mail');
+        //configuramos el INPUTN
+    INPUTN.setAttribute('type', 'text');
+    INPUTN.setAttribute('id', 'nombre');
+    INPUTN.setAttribute('placeholder', 'Nombre');
+        //configuramos el INPUTE
+    INPUTE.setAttribute('type', 'text');
+    INPUTE.setAttribute('id', 'mail');
+    INPUTE.setAttribute('placeholder', 'E-Mail');
+        //creamos un boton para cargar los datos e imprimirlos en consola
+    const ENVIAR = document.createElement('button');
+        //configuramos el boton ENVIAR
+    ENVIAR.textContent = "ENVIAR";
+        //creamos un div como contenedor del boton
+    const DIV2 = document.createElement('div');
+        //configuramos el div
+    DIV2.setAttribute('class','contenedor-button');
+        //agregamos el boton ENVIAR AL DIV2
+    DIV2.appendChild(ENVIAR);
+    //AGREGAMOS LOS LABELS, LOS INPUTS Y EL DIV AL FORM
+    FORM.appendChild(LABELN);
+    FORM.appendChild(INPUTN);
+    FORM.appendChild(LABELE);
+    FORM.appendChild(INPUTE);
+    FORM.appendChild(DIV2);
+    //agregamos el FORM a el DIV
+    DIV.appendChild(FORM);
+    //agregamos el DIV al SECTION
+    SECTION.appendChild(DIV);
+    return SECTION;
 }
